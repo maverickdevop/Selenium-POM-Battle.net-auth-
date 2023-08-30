@@ -18,7 +18,7 @@ class TestRecoverPassword(BaseTest):
         self.recover.open_page(Data.URL + "login/ru/")
         self.recover.should_be_recover_page()
 
-    @pytest.mark.xfail(reason="Этот тест падает из-за появления капчи")
+    @pytest.mark.xfail(reason="Этот тест может падать из-за появления капчи")
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.testcase('Проверка, что мы можем восстановить пароль по email')
     def test_recover_pass_by_email(self):
