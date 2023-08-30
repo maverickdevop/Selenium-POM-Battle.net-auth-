@@ -25,7 +25,7 @@ class BasePage:
 
     @allure.title("Метод клика по элементу")
     def do_click(self, by_locator):
-        element = self.wait.until(EC.presence_of_element_located(by_locator))
+        element = self.wait.until(EC.element_to_be_clickable(by_locator))
         element.click()
 
     @allure.title("Метод ввода текста в элемент")
@@ -85,7 +85,7 @@ class BasePage:
     @allure.title("Метод проверки исчезновения элемента")
     def check_element_disappeared(self, by_locator):
         try:
-            self.wait.until(EC.invisibility_of_element(by_locator))
+            self.wait.until(EC.invisibility_of_element_located(by_locator))
         except TimeoutException:
             return False
         return True
