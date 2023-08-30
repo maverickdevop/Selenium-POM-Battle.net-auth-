@@ -10,7 +10,7 @@ class LoginMainPage(BasePage):
 
     def should_be_login_page(self):
         """ Метод проверки корректного окна логина и title"""
-        self.check_element(LoginPage.PAGE_TITLE),\
+        assert self.check_element(LoginPage.PAGE_TITLE),\
             GlobalErrorMessages.WRONG_ELEMENT.value
         self.assert_text_in_element(LoginPage.PAGE_TITLE, Data.LOGIN_TITLE)
         assert self.get_page_title() == Data.LOGIN_PAGE_TITLE,\
@@ -18,17 +18,17 @@ class LoginMainPage(BasePage):
 
     def should_be_email_input(self):
         """ Метод проверки наличия инпута Email/Логина """
-        self.check_element(LoginPage.INPUT_LOGIN),\
+        assert self.check_element(LoginPage.INPUT_LOGIN),\
             GlobalErrorMessages.WRONG_ELEMENT.value
 
     def should_be_password_input(self):
         """ Метод проверки наличия инпута пароля """
-        self.check_element(LoginPage.INPUT_PASSWORD),\
+        assert self.check_element(LoginPage.INPUT_PASSWORD),\
             GlobalErrorMessages.WRONG_ELEMENT.value
 
     def should_be_sumbit_button(self):
         """ Метод проверки наличия кнопки 'Авторизироваться' """
-        self.check_element(LoginPage.SUBMIT_BTN),\
+       assert  self.check_element(LoginPage.SUBMIT_BTN),\
             GlobalErrorMessages.WRONG_ELEMENT.value
 
     def should_be_valid_login_form(self):
@@ -67,9 +67,8 @@ class LoginMainPage(BasePage):
         self.send_keys(LoginPage.INPUT_PASSWORD, password)
         try:
             self.do_click(LoginPage.WATCH_PASSWORD_BTN)
-            pass_lenght = self.get_element_property(LoginPage.INPUT_PASSWORD, "data-charmax-counter")\
-                .replace("/128")
+            """ Получение длины введенного пароля в инпут """
+            pass_lenght = self.get_element_property(LoginPage.INPUT_PASSWORD, "data-charmax-counter").replace("/128")
             self.assert_element_lenght(8, pass_lenght)
-
         except Exception:
             return False
