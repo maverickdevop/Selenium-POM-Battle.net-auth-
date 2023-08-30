@@ -6,8 +6,8 @@ import pytest
 
 
 @allure.severity(allure.severity_level.CRITICAL)
-@allure.suite('Тесты на проверку работы регистрации нового пользователя')
-class TestSignUp(BaseTest):
+@allure.suite('Тесты на проверку восстановления своего пароля')
+class TestRecoverPassword(BaseTest):
 
     def setup(self):
         self.recover = RecoverPasswordMainPage(self.driver)
