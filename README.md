@@ -44,5 +44,6 @@
    pytest tests/* --browser=firefox --alluredir=results
    allure serve results
    
-  ![image](https://github.com/maverickdevop/Red-Collar/assets/57834199/1b8572cb-7080-4407-aec1-1e008cd9e64f)
+![image](https://github.com/maverickdevop/Red-Collar/assets/57834199/3d626c5e-9ea1-46dc-94e1-b32c30865e89)
+
 
