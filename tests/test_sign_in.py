@@ -6,7 +6,7 @@ import allure
 
 @allure.severity(allure.severity_level.CRITICAL)
 @allure.suite('Тесты на проверку работы регистрации нового пользователя')
-class TestLogin(BaseTest):
+class TestSignUp(BaseTest):
 
     def setup(self):
         self.signup = SignUpMainPage(self.driver)
