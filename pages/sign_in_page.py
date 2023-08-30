@@ -19,17 +19,17 @@ class SignUpMainPage(BasePage):
 
     def should_be_country_selector(self):
         """ Метод проверки наличия селектора выбора страны """
-        self.check_element(SignUpPage.COUNTRY_SELECTOR),\
+        assert self.check_element(SignUpPage.COUNTRY_SELECTOR),\
             GlobalErrorMessages.WRONG_ELEMENT.value
 
     def should_be_date_input(self):
         """ Метод проверки наличия селектора выбора страны """
-        self.check_element(SignUpPage.DATE_INPUT),\
+        assert self.check_element(SignUpPage.DATE_INPUT),\
             GlobalErrorMessages.WRONG_ELEMENT.value
 
     def should_be_sumbit_button(self):
         """ Метод проверки наличия кнопки 'Далее' """
-        self.check_element(SignUpPage.FLOWSUBMIT),\
+        assert self.check_element(SignUpPage.FLOWSUBMIT),\
             GlobalErrorMessages.WRONG_ELEMENT.value
 
     def should_be_valid_sign_up_form(self):
