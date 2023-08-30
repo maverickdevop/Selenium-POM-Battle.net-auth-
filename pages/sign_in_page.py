@@ -58,7 +58,7 @@ class SignUpMainPage(BasePage):
         """ Метод генерации рандомного телефона """
         phone_digits = [random.randint(0, 9) for _ in range(10)]
         phone_number = f"+7{''.join(map(str, phone_digits))}"
-        print("Сгенерирована рандомный номер:", phone_number)
+        print("Сгенерирован рандомный номер:", phone_number)
         return phone_number
 
     def create_adult_user(self,):
