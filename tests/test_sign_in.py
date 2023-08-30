@@ -5,7 +5,7 @@ import allure
 
 
 @allure.severity(allure.severity_level.CRITICAL)
-@allure.suite('Тесты на проверку работы авторизации на сайте')
+@allure.suite('Тесты на проверку работы регистрации нового пользователя')
 class TestLogin(BaseTest):
 
     def setup(self):
