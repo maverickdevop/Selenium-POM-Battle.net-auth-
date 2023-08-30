@@ -37,7 +37,7 @@
 
 3. Для запуска тестов используйте команду:
    ```shell
-   pytest tests/* --browser_name=firefox
+   pytest tests/* --browser=firefox
 
 4. Для визуализации результатов теста можно создать Allure результаты
    ```shell
