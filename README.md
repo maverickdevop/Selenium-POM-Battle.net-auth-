@@ -5,7 +5,7 @@
 ## Инструменты
 
 - Python 3.10
-- Selenium
+- Selenium WebDriver
 - PyTest
 - WebdriverManager
 
