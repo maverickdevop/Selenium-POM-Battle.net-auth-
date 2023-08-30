@@ -10,22 +10,26 @@ class LoginMainPage(BasePage):
 
     def should_be_login_page(self):
         """ Метод проверки корректного окна логина и title"""
-        self.check_element(LoginPage.PAGE_TITLE)
+        self.check_element(LoginPage.PAGE_TITLE),\
+            GlobalErrorMessages.WRONG_ELEMENT.value
         self.assert_text_in_element(LoginPage.PAGE_TITLE, Data.LOGIN_TITLE)
         assert self.get_page_title() == Data.LOGIN_PAGE_TITLE,\
             GlobalErrorMessages.WRONG_TITLE.value
 
     def should_be_email_input(self):
         """ Метод проверки наличия инпута Email/Логина """
-        self.check_element(LoginPage.INPUT_LOGIN)
+        self.check_element(LoginPage.INPUT_LOGIN),\
+            GlobalErrorMessages.WRONG_ELEMENT.value
 
     def should_be_password_input(self):
         """ Метод проверки наличия инпута пароля """
-        self.check_element(LoginPage.INPUT_PASSWORD)
+        self.check_element(LoginPage.INPUT_PASSWORD),\
+            GlobalErrorMessages.WRONG_ELEMENT.value
 
     def should_be_sumbit_button(self):
         """ Метод проверки наличия кнопки 'Авторизироваться' """
-        self.check_element(LoginPage.SUBMIT_BTN)
+        self.check_element(LoginPage.SUBMIT_BTN),\
+            GlobalErrorMessages.WRONG_ELEMENT.value
 
     def should_be_valid_login_form(self):
         """ Метод проверки, что мы на нужной странце и есть все элементы на странице """
